@@ -1,73 +1,222 @@
-<html lang="en"></html>
+
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <img src="images/Untitled design.png" alt="vynil" width = "30px" height = "30px">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Genres
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="images/Untitled design.png"><img src="images/Untitled design.png" height= "50px" width="50spx""navbar"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link-active" aria-current="page" href="index.html">Home</a>
+          <a class="nav-link-1" href="rock.html">Rock</a>
+          <a class="nav-link-2" href="russian.html">Russian Rock</a>
+          <a class="nav-link-3" href="modern.html">Modern POP</a>
+          <a class="nav-link-4" href="60-80.html">60's - 80's POP</a>
         </div>
-      </nav>
+      </div>
+    </div>
+  </nav>
 
-      <video src="videos/My Movie.mp4" autoplay loop width = "100%" class="spinning">Let it spin</video>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-      <button class="button"> FISH TANK</button>
+      <div class="video-container">
+        <video autoplay loop muted playsinline class="background-video">
+          <source src="videos/My Movie.mp4" type="video/mp4">
+        </video>
+        <div class="overlay-text">
+          <h1>ALBUM COVERS OF ALL GENRES</h1>
+          <p>Explore the world of the most famous album covers</p>
+        </div>
+      </div>
 
-<h5 class="animate">
-     BEST EVER
-</h5>
+<div class="container">
+  <div class="looping">
+  <button class = "image-button" type="button" onclick="playMusic()"><img src="images/Screenshot 2024-12-02 at 17.11.48.png" alt="CLICK" height = "300" width="300"></button>
 
-<h5 class="animate">
-Rodrigo is wanted for the crimes he commited in Mount Kalimanjaro
-</h5>
+  <audio id="music">
+    <source src="audio/ABBA - Dancing Queen (Official Music Video) [TubeRipper.com].mp3" type="audio/mp3">
+  </audio>
 
-<p>There are 30 million hungry cildren in the world. Please donate to feed them. Just a dollar for a cild.</p>
+  <script>
+    function playMusic() {
+      const audio = document.getElementById('music');
+      if (audio.paused) {
+        audio.play();
+      } else {
+        audio.pause();
+      }
+    }
+  </script>
 
-<div class="emoji1">
-  <img src="images/220x230.png" alt="" height="20px" width="20px">
+<button class = "image-button-1" type="button" onclick="playMusic1()"><img src="images/Screenshot 2024-12-02 at 17.19.52.png" alt="CLICK" height = "300" width="300"></button>
+
+<audio id="music1">
+  <source src="audio/Elton John Dua Lipa - Cold Heart (PNAU Remix) (Official Video) [TubeRipper.com].mp3" type="audio/mp3">
+</audio>
+
+<script>
+  function playMusic1() {
+    const audio = document.getElementById('music1');
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+</script>
+
+<button class = "image-button-2" type="button" onclick="playMusic2()"><img src="images/Screenshot 2024-12-02 at 17.35.03.png" alt="CLICK" height = "300" width="300"></button>
+
+<audio id="music2">
+  <source src="audio/No Particular Place To Go [TubeRipper.com].ogg" type="audio/ogg">
+</audio>
+
+<script>
+  function playMusic2() {
+    const audio = document.getElementById('music2');
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+</script>
+
+<button class = "image-button-3" type="button" onclick="playMusic3()"><img src="images/Screenshot 2024-12-02 at 17.49.42.png" alt="CLICK" height = "300" width="300"></button>
+
+<audio id="music3">
+  <source src="audio/Крошка моя [TubeRipper.com].mp3" type="audio/mp3">
+</audio>
+
+<script>
+  function playMusic3() {
+    const audio = document.getElementById('music3');
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+</script>
+
+<button class = "image-button-4" type="button" onclick="playMusic4()"><img src="images/Screenshot 2024-12-02 at 17.53.32.png" alt="CLICK" height = "300" width="300"></button>
+
+<audio id="music4">
+  <source src="audio/Vivaldi - Winter (The Four Seasons) (Short Version) [TubeRipper.com].mp3" type="audio/mp3">
+</audio>
+
+<script>
+  function playMusic4() {
+    const audio = document.getElementById('music4');
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+</script>
+
+
+<button class = "image-button" type="button" onclick="playMusic()"><img src="images/Screenshot 2024-12-02 at 17.11.48.png" alt="CLICK" height = "300" width="300"></button>
+
+<audio id="music">
+  <source src="audio/ABBA - Dancing Queen (Official Music Video) [TubeRipper.com].mp3" type="audio/mp3">
+</audio>
+
+<script>
+  function playMusic() {
+    const audio = document.getElementById('music');
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+</script>
+
+<button class = "image-button-1" type="button" onclick="playMusic1()"><img src="images/Screenshot 2024-12-02 at 17.19.52.png" alt="CLICK" height = "300" width="300"></button>
+
+<audio id="music1">
+<source src="audio/Elton John Dua Lipa - Cold Heart (PNAU Remix) (Official Video) [TubeRipper.com].mp3" type="audio/mp3">
+</audio>
+
+<script>
+function playMusic1() {
+  const audio = document.getElementById('music1');
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+}
+</script>
+
+<button class = "image-button-2" type="button" onclick="playMusic2()"><img src="images/Screenshot 2024-12-02 at 17.35.03.png" alt="CLICK" height = "300" width="300"></button>
+
+<audio id="music2">
+<source src="audio/No Particular Place To Go [TubeRipper.com].ogg" type="audio/ogg">
+</audio>
+
+<script>
+function playMusic2() {
+  const audio = document.getElementById('music2');
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+}
+</script>
+
+<button class = "image-button-3" type="button" onclick="playMusic3()"><img src="images/Screenshot 2024-12-02 at 17.49.42.png" alt="CLICK" height = "300" width="300"></button>
+
+<audio id="music3">
+<source src="audio/Крошка моя [TubeRipper.com].mp3" type="audio/mp3">
+</audio>
+
+<script>
+function playMusic3() {
+  const audio = document.getElementById('music3');
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+}
+</script>
+
+<button class = "image-button-4" type="button" onclick="playMusic4()"><img src="images/Screenshot 2024-12-02 at 17.53.32.png" alt="CLICK" height = "300" width="300"></button>
+
+<audio id="music4">
+<source src="audio/Vivaldi - Winter (The Four Seasons) (Short Version) [TubeRipper.com].mp3" type="audio/mp3">
+</audio>
+
+<script>
+function playMusic4() {
+  const audio = document.getElementById('music4');
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+}
+</script>
+
+</div>
 </div>
 
-<div class="emoji2">
-  <img src="images/4096x4096.png" alt="" height="20px" width="20px">
-</div>
-
-<div class="emoji3">
-  <img src="images/480x480.png" alt="" height="20px" width="20px" >
-</div>
-
-<div class="emoji4">
-  <img src="images/dc216d2a2ad1f894d7977ffa5e172e72.png" alt="" height="20px" width="20px">
-</div>
-
-<div class="emoji5">
-  <img src="images/heart-emoji-png-2.png" alt="" height="20px" width="20px">
-</div>
-
-<div>
-  <img src="images/Untitled design.png" alt="" height="20px" width="20px">
-</div>
-</body>
+<h6>CLICK   ON   THE   ALBUMS</h6>
+    
+  </body>
+</html>
